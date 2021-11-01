@@ -9,12 +9,8 @@ class WelcomeController extends Controller
 {
     public function index()
     {
-        $jobs = Job::all();
-
-        return view('welcome', [
-     		'title' => 'Our Jobs',
-		    'jobs' => $jobs
-        ]);
+    return view('welcome');
     }
+
 
 }
