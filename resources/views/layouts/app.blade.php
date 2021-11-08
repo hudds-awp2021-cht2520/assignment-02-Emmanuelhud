@@ -15,20 +15,19 @@
 		</div>
         </section>
 
-        <section class="navigation">
-		<div class="container mx-auto">
+        
             <ul class="navbar">
                 <li><a href="/">Home</a></li>                
                 @if (Auth::guest())
                     <li><a href="/login">Login</a></li>
+                    <li><a href="/register">Register</a></li>
                 @else 
                     <li><a href="/jobs">Jobs</a></li>
                     <li><a href="/jobs/create">Create a Job Listing</a></li>
+                    <li><a href="/logout">Logout</a></li>
                 @endif
             </ul>
 
-		</div>
-        </section>
 
         <section class="pageTitle">
 		<div class="container mx-auto">

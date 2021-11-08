@@ -14,12 +14,10 @@ class JobFactory extends Factory
     public function definition()
     {
         return [
-            'name' => $this->faker->name(),
-            'company' => $this->faker->name(),
-            'listed' => $this->faker->date(),
+            'user_id' => User::factory(1)->create()->first(),
+            'name' => $this->faker->name(),                      
             'location' => $this->faker->city(),
-            'description' => $this->faker->realText(),
-            'listed' => $this->faker->date(),
+            'description' => $this->faker->realText(),        
         ];
     }
 }

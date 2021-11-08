@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Job;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class JobController extends Controller
 {
@@ -39,17 +40,25 @@ return view('jobs/index', [
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request){
-        $request->validate([
-            'name' => 'required',
-            'comments' => 'required'
-        ]);
+    public function store(Request $request)
+{
+    $request->validate([
+        'name' => 'required',
+        'location' => 'required',
+        'description' => 'required'
+    ]);
 
-        Job::create($request->all());
+    $job = new Job;
+    $job->user()->associate(Auth::user());
+    $job->name = $request->name;
+    $job->location = $request->location;
+    $job->description = $request->description;
+    $job->save();
+        
+    return redirect()->route('jobs.index')
+        ->with('success','Job listing created successfully.');
+}
 
-        return redirect()->route('jobs.index')
-            ->with('success', 'Signing created successfully.');
-    }
 
 
     /**
@@ -86,18 +95,22 @@ return view('jobs/index', [
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, Job $job)
-    {
-        $request->validate([
-            'name' => 'required',
-            'comments' => 'required'
-        ]);
+{
+    $request->validate([
+        'name' => 'required',
+        'location' => 'required',
+        'description' => 'required'
+    ]);
 
-        $job->update($request->all());
+    $job->name = $request->name;
+    $job->location = $request->location;
+    $job->description = $request->description;
+    $job->save();
 
-        return redirect()->route('jobs.index')
-            ->with('success', 'Signing updated successfully');
+    return redirect()->route('jobs.index')
+        ->with('success', 'Job listing updated successfully');
+}
 
-    }
 
     /**
      * Remove the specified resource from storage.
@@ -110,7 +123,7 @@ return view('jobs/index', [
         $job->delete();
 
         return redirect()->route('jobs.index')
-            ->with('success', 'Signing deleted successfully');
+            ->with('success', 'Job listing deleted successfully');
 
     }
 }

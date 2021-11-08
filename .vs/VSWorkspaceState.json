@@ -1,12 +1,10 @@
 {
   "ExpandedNodes": [
     "",
+    "\\app",
     "\\app\\Http",
-    "\\app\\Http\\Controllers",
-    "\\database",
-    "\\database\\migrations",
-    "\\resources\\views"
+    "\\app\\Http\\Controllers"
   ],
-  "SelectedNode": "\\database\\migrations\\2021_10_28_163814_create_jobs_table.php",
+  "SelectedNode": "\\app\\Http\\Controllers\\LogoutController.php",
   "PreviewInSolutionExplorer": false
 }

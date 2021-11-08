@@ -8,6 +8,14 @@
         <form action="{{ route('authenticate') }}" method="POST">
             @csrf
 
+            @if ($message = Session::get('success'))
+
+                <div class="alert alert-success">
+
+                    <p>{{ $message }}</p>
+                </div>
+            @endif
+
             <div class="my-10">
                 <label for="email">Email:</label>
                 <input type="text" name="email" id="email" class="p-2 bg-gray-200 @error('email') is-invalid @enderror" />

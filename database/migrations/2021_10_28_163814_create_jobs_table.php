@@ -16,13 +16,10 @@ class CreateJobsTable extends Migration
         Schema::create('jobs', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('company');
-            $table->enum('rating', array('1*', '2*','3*', '4*','5*'));
             $table->string('location');
-            $table->enum('type', array('Part-time', 'Full-time', 'Permanent', 'Temporary', 'Contract', 'Volunteer', 'Apprenticeship', 'Internship'));
             $table->text('description');
-            $table->date('listed');
             $table->timestamps();
+            $table->foreignId('user_id')->constrained();
         });
     }
 
