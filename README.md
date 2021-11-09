@@ -28,6 +28,8 @@ The Delete operation was implemented to allow companies who put up a job listing
 Where I used each crud function.
 - Single Table (Jobs) ~ JOBFINDR displays multiple job listings to users, and these must be stored and retrieved from the database. As a result, to ensure effectively and efficiency JOBFINDR requires the need for a Job Table to store all the details of each job including the Job Name, Location of the job and a detailed Description. The data type for each field must also be appropriate for the data that will be inputted and so for the Name field was a String, the Location also String, and the Description is Text. The reasoning behind using a String for the Name and Location is because String is the equivalent of VARCHAR in MySQL, and it allows both numbers and letters to be used. This is an appropriate data type for this field because the Name of a job will include the company and possibly the salary which might have numbers. The same goes for the Location, which might include the postcode. Text is appropriate for the description because this will most likely consist of a large body of text to ensure that users of JOBFINDR are given adequate information about each job and its requirements.
 - Linking Job Table with Secondary Table (User) ~ The JOBFINDR has included the feature of linking together the user and jobs table and this can be identified by the user user_id in the jobs table.
+
+
 ![user_id](https://user-images.githubusercontent.com/79155600/141002710-69c1d907-c89f-4079-9a6f-6c42779ee959.png)
 
 - User Authentication ~ JOBFINDR requires users to log in before they can gain full access and reap the benefits of this elegant web application. When users initially access the application, they must fill out a login form or conversely register to be able to login and then gain access. They are required to provide a name, email address and a password when registering and their email and password to login. On registering, login details are submitted and sent to the User table in the database, and this is checked and authenticated when logging in to ensure that the user has registered their login details and can be granted authorised access.  
@@ -108,6 +110,8 @@ Various tests need to be run to assess the validity of the code and if the diffe
 To run the tests, you enter this command into git-bash: php artisan test.
 
 The first test was to test if the get function works.
+
+
 ![test1](https://user-images.githubusercontent.com/79155600/141007023-622e98f7-d1d5-42b7-ae88-44b706f571cb.png)
 
 As you can see, the test passed!
@@ -132,4 +136,4 @@ The JOBFINDR logo was provided under the Free License by Vecteezy at [Vecteezy.c
 
 The JOBFINDR README file was made using the Laravel README file as a template.
 
-The example jobs on JOBFINDR were provided by Indeed at  [indeed.com]( https://uk.indeed.com/jobs?q=Full%20Time&l=Leeds%2C%20West%20Yorkshire&vjk=5520ebb96b39ef28).
+The example jobs on JOBFINDR were provided by [Indeed]( https://uk.indeed.com/jobs?q=Full%20Time&l=Leeds%2C%20West%20Yorkshire&vjk=5520ebb96b39ef28).
