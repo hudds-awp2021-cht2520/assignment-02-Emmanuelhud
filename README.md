@@ -61,6 +61,7 @@ Once the user has entered valid login credentials, they will be granted access t
 ![image3 1](https://user-images.githubusercontent.com/79155600/141002051-e7261208-99b7-4eb3-980b-88f4d37f8e4a.png)
 
 The user can go to the jobs page and views all the avails jobs currently on JOBFINDR. When they click on a job, they can see the full details of the job including the name location and description.
+
 ![image4 1](https://user-images.githubusercontent.com/79155600/141002098-9203b7d2-8236-4755-878b-953972f7ffbe.png)
 ![image4 2](https://user-images.githubusercontent.com/79155600/141002148-cf490e24-6083-403d-a76d-d5d2290dc091.png)
 
