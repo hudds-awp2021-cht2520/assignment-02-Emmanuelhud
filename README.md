@@ -129,5 +129,7 @@ Testing Improvements
 ## JOBFINDR Notable Mentions
 
 The JOBFINDR logo was provided under the Free License by Vecteezy at [Vecteezy.com](https://www.vecteezy.com/)
+
 The JOBFINDR README file was made using the Laravel README file as a template.
+
 The example jobs on JOBFINDR were provided by Indeed at [indeed.com]( https://uk.indeed.com/jobs?q=Full%20Time&l=Leeds%2C%20West%20Yorkshire&vjk=5520ebb96b39ef28
