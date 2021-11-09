@@ -1,4 +1,7 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src=" https://user-images.githubusercontent.com/79155600/141003251-93395262-0f9f-40ad-9013-b4b62c4f8a2b.png" width="400"></a></p>
+<p align="center"><img src=" https://user-images.githubusercontent.com/79155600/141003251-93395262-0f9f-40ad-9013-b4b62c4f8a2b.png" width="400"></a></p>
+
+![JOBFINDRlogo](https://user-images.githubusercontent.com/79155600/141016359-185bd82e-c3fb-4b52-9024-9b28f41b51bf.png)
+
 
 ## About JOBFINDR
 
