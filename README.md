@@ -49,33 +49,54 @@ In the event of a failure, delete and re-install node and re-issue the command �
 ## JOBFINDR Usage
 
 When you initially access the website, you are required to login. Enter correct login details and don’t leave any field empty. These login details will give you full access JOBFINDR.
+
+
 ![image1 1](https://user-images.githubusercontent.com/79155600/141001733-8495a46b-fe1d-4bb8-a1f2-61a2317f565d.png)
+
 ![image1 2](https://user-images.githubusercontent.com/79155600/141001852-10f4d2b1-4634-4993-8aba-fe98b5e64720.png)
+
 You can register if you don’t have login details. Click the register button in the nav bar to go to the register page and fill in the form. Don’t leave any fields empty.
+
+
 ![image2 1](https://user-images.githubusercontent.com/79155600/141001888-cd417796-9fbd-44e8-85b4-f6628c244f3d.png)
+
 ![image2 2](https://user-images.githubusercontent.com/79155600/141001959-486121e2-771c-49f7-a10b-bb5fd501b82e.png)
+
 ![image2 3](https://user-images.githubusercontent.com/79155600/141001992-b98cbda1-8f03-4605-96e0-346224ff9d34.png)
+
 ![image2 4](https://user-images.githubusercontent.com/79155600/141002022-d43f2dde-5943-4e8f-ba18-3d4bc3b8f409.png)
 
 Once the user has entered valid login credentials, they will be granted access to the web application and taken to the home page.
+
 ![image3 1](https://user-images.githubusercontent.com/79155600/141002051-e7261208-99b7-4eb3-980b-88f4d37f8e4a.png)
 
 The user can go to the jobs page and views all the avails jobs currently on JOBFINDR. When they click on a job, they can see the full details of the job including the name location and description.
+
 
 ![image4 1](https://user-images.githubusercontent.com/79155600/141002098-9203b7d2-8236-4755-878b-953972f7ffbe.png)
 ![image4 2](https://user-images.githubusercontent.com/79155600/141002148-cf490e24-6083-403d-a76d-d5d2290dc091.png)
 
 A user can create a job listing by selecting the ‘Create a job button’ in the nav bar. To create a job, they must completely fill out the form. Their created job will then be displayed in the jobs page and the jobs database.
+
+
 ![image5 1](https://user-images.githubusercontent.com/79155600/141002194-d76c9efd-7794-4e11-b0e9-4538e56713f3.png)
+
 ![image5 2](https://user-images.githubusercontent.com/79155600/141002221-b1c5862d-f803-4cf8-8167-7557c3d08190.png)
+
 ![image5 3](https://user-images.githubusercontent.com/79155600/141002260-6880817f-b134-472c-a1ff-4aff2f06b301.png)
+
 ![image5 4](https://user-images.githubusercontent.com/79155600/141002289-5df58646-2f78-47fe-8f76-4e700a12c861.png)
 
 The user can make changes by using the buttons, once a new job has been created.
+
+
 ![image6 1](https://user-images.githubusercontent.com/79155600/141002325-c41db318-f740-4ae0-ab6c-769d62f30604.png)
+
 ![image6 2](https://user-images.githubusercontent.com/79155600/141002367-039a7dd1-f406-4f23-a27d-2c119d7a063f.png)
 
 When a user has finishing using the web application they can log out.
+
+
 ![image7 1](https://user-images.githubusercontent.com/79155600/141002419-c7d0a721-e6b0-4bd6-a191-2e8177043673.png)
 
 
