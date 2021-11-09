@@ -76,6 +76,7 @@ The user can go to the jobs page and views all the avails jobs currently on JOBF
 
 
 ![image4 1](https://user-images.githubusercontent.com/79155600/141002098-9203b7d2-8236-4755-878b-953972f7ffbe.png)
+
 ![image4 2](https://user-images.githubusercontent.com/79155600/141002148-cf490e24-6083-403d-a76d-d5d2290dc091.png)
 
 A user can create a job listing by selecting the ‘Create a job button’ in the nav bar. To create a job, they must completely fill out the form. Their created job will then be displayed in the jobs page and the jobs database.
