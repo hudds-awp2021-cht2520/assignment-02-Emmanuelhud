@@ -12,7 +12,9 @@ To guarantee that JOBFINDR facilitates and simplifies the job-hunting process, v
 - Xampp ~ xampp is a web server solution that enables users to create web applications offline. Xampp was imperative to the development of JOBFINDR as it was used to monitor the progress of the build and allow for incremental checks to be carried out and for milestones to be achieved and assessed.
 - Laravel ~ this was used because it is one of the best web frameworks that allows for fast and efficient web application development.
 - Visual Studio ~ this was used as it makes web application development easier by providing features such as compilers and completion tool amongst many more.
-- GitHub ~ github was used because it great way to work on the project as it allowed me to work collaboratively witch ease.
+- GitHub ~ github was used because it’s a great way to work on the project as it allowed me to work collaboratively witch ease.
+- phpMyAdmin and MySQL ~ phpMyAdmin is a software tool that was used to carry out necessary administration tasks for my web application. These tasks include, creating and editing a database and running queries. MySQL was used because it is a great database that had inclusive support for the development of my web application. 
+
 
 
 JOBFINDR has implemented a range of features to ensure its usability and efficiency of finding a new job. These include:
