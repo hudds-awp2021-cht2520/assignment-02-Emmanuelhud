@@ -4,14 +4,14 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Assignment01 - Job Finder - @yield('title')</title>
+        <title>Assignment01-JOBFINDR - @yield('title')</title>
 
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     </head>
     <body>
         <section class="pageHeader">
 		<div class="container mx-auto">
-            <h1>Job Finder</h1>
+            <h1>JOBFINDR</h1>
 		</div>
         </section>
 

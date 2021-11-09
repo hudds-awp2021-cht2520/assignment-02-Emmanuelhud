@@ -12,7 +12,9 @@ class Job extends Model
     use HasFactory;
 
     protected $fillable = [
-        'comments'
+        'name',
+        'location',
+        'description'
     ];
 
     public function user()

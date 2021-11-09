@@ -2,9 +2,10 @@
   "ExpandedNodes": [
     "",
     "\\app",
-    "\\app\\Http",
-    "\\app\\Http\\Controllers"
+    "\\app\\Models",
+    "\\tests",
+    "\\tests\\Feature"
   ],
-  "SelectedNode": "\\app\\Http\\Controllers\\LogoutController.php",
+  "SelectedNode": "\\tests\\Feature\\JobTest.php",
   "PreviewInSolutionExplorer": false
 }
