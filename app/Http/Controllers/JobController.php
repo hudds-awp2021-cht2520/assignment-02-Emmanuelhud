@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Job;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use App\Models\Vote;
 
 class JobController extends Controller
 {
@@ -14,13 +15,14 @@ class JobController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index() {
-$jobs = Job::orderBy('created_at', 'desc')
-->paginate(20);
+        $jobs = Job::withVotes()
+        ->orderBy('created_at', 'desc')
+        ->paginate(20);
 
-return view('jobs/index', [
+        return view('jobs/index', [
            'jobs' => $jobs
-]);
-}
+        ]);
+    }
 
 
 
@@ -126,4 +128,50 @@ return view('jobs/index', [
             ->with('success', 'Job listing deleted successfully');
 
     }
+
+
+
+
+
+    protected function _voteExists($voteData) {
+        return Vote::where([
+            'job_id' => $voteData['job_id'],
+            'user_id' => $voteData['user_id']
+        ])->exists();
+    }
+
+    public function upVote(Job $job) {
+        if ($this->_voteExists([
+            'job_id' => $job->id,
+            'user_id' => Auth::user()->id
+        ])) {
+            return redirect()->route('jobs.index')
+            ->with('success', 'You have already voted for this job.');
+        }
+
+        $job->addUpVote(Auth::user());
+
+        return redirect()->route('jobs.index')
+            ->with('success', 'Job up voted');
+        }
+
+    public function downVote(Job $job) {
+        if ($this->_voteExists([
+            'job_id' => $job->id,
+            'user_id' => Auth::user()->id
+        ])) {
+            return redirect()->route('jobs.index')
+            ->with('success', 'You have already voted for this job.');
+        }
+        
+        $job->addDownVote(Auth::user());
+
+        return redirect()->route('jobs.index')
+        ->with('success', 'Job down voted');
+    }
+
+
+
+
+
 }
