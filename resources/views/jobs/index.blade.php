@@ -15,6 +15,24 @@
 
             <p>{{ $job->description }}</p>
 
+            <p>
+                Up votes: {{ $job->up_votes }}<br>
+                Down votes: {{ $job->down_votes }}
+            </p>
+            
+            <form action="{{ route('jobs.upvote', $job->id) }}" method="POST">
+                @csrf
+                
+                <button type="submit" class="btn">Up Vote</button>
+            </form>
+            
+            <form action="{{ route('jobs.downvote', $job->id) }}" method="POST">
+                @csrf
+
+                <button type="submit" class="btn">Down Vote</a>
+            </form>
+
+
             @if (Auth::user() && Auth::user()->id === $job->user_id)
                 <form action="{{ route('jobs.destroy', $job->id) }}" method="POST">
                     <a class="btn btn-blue" href="{{ route('jobs.show', $job->id) }}">Show</a>
