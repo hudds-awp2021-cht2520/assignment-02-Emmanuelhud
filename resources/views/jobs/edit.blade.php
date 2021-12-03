@@ -37,3 +37,6 @@
         <button type="submit" class="btn btn-blue">Update</button>
     </form>
 @endsection
+
+
+POST /jobs/23/rate

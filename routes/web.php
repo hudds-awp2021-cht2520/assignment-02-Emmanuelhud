@@ -22,3 +22,4 @@ Route::post('/register', [UserController::class, 'store'])->name('register.store
 Route::post('/jobs/{job}/up-vote', [JobController::class, 'upVote'])->name('jobs.upvote')->middleware('auth');
 Route::post('/jobs/{job}/down-vote', [JobController::class, 'downVote']) ->name('jobs.downvote')->middleware('auth');
 
+Route::post('/jobs/{job}/rate')

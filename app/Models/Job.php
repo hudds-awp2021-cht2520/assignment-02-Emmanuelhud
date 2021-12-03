@@ -60,5 +60,10 @@ class Job extends Model
             }
         ]);
     }
+
+    public function ratings()
+    {
+        return $this->hasMany('App\Models\Rating');
+    }
 }
 
