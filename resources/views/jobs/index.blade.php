@@ -1,5 +1,6 @@
 @extends('layouts.app')
 
+
 @section('title', 'All of our Available Jobs')
 
 @section('content')
@@ -9,6 +10,24 @@
         </div>
     @endif
     
+    @section('content')
+    <form action="{{ route('jobs.index') }}" method="GET">
+        @csrf
+
+        <div class=" my-10">
+            <label for="search">Search</label>
+            <input name="search" id="search" class=" p-2 bg-gray-200 @error('search') is-invalid @enderror" />
+
+            @error('name')
+                <div class="alert alert-danger">{{ $message }}</div>
+            @enderror
+        </div>
+
+        <button type="submit" class="btn btn-blue">Search</button>
+    </form>
+
+    <a href="/jobs">Back to job list</a>
+
     @foreach ($jobs as $job)
         <article>
             <h3><a href="{{ route('jobs.show', $job->id) }}">{{ $job->name }}</a></h3>
@@ -45,8 +64,9 @@
                 </form>
             @endif
         </article>
+        
     @endforeach
 
 
-    {{ $jobs->links() }}
+    
 @endsection

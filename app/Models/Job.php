@@ -9,6 +9,7 @@ use App\Models\User;
 use App\Models\Vote;
 
 
+
 class Job extends Model
 {
     use HasFactory;
@@ -28,9 +29,6 @@ class Job extends Model
     {
         return $this->hasMany(Vote::class);
     }
-
-
-
 
     protected function _addVote(User $user, $isUp = true) {
         return $this->votes()->create([
@@ -60,5 +58,39 @@ class Job extends Model
             }
         ]);
     }
+
+
+
+    public function ratings() {
+        return $this->hasMany(Rating::class);
+      }
+
+      protected function _addRating(User $user, $isUp = true) {
+        return $this->ratings()->create([
+          'user_id' => $user_id,
+          'rate' => $rating,
+          'comment' => $comment
+        ]);
+      }
+      
+      public function addRate($user) {
+        return $this->_addRating($user, true);
+      }
+      
+      public function addComment($user) {
+        return $this->_addRating($user, false);
+      }
+
+      public function scopeWithRatings($query) {
+        return $query->withRate([
+          'ratings AS rates' => function (Builder $query) {
+              $query->where('rate', true);
+          },
+          'ratings AS comments' => function (Builder $query) {
+              $query->where('rate', false);
+          }
+        ]);
+      }
+      
 }
 

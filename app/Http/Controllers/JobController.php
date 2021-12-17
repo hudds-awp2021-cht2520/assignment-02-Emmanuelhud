@@ -14,11 +14,15 @@ class JobController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index() {
-        $jobs = Job::withVotes()
-        ->orderBy('created_at', 'desc')
-        ->paginate(20);
-
+    public function index(Request $request) {
+        $jobsQuery = Job::orderBy('created_at', 'DESC');
+           
+        if ($request->search) {
+            $jobsQuery->where('name', 'LIKE', "%{$request->search}%");    
+        }
+           
+        $jobs = $jobsQuery->paginate(20);
+       
         return view('jobs/index', [
            'jobs' => $jobs
         ]);
@@ -171,7 +175,12 @@ class JobController extends Controller
     }
 
 
-
+    public function search(Request $request)
+    {
+          $query = $request->get('query');
+          $filterResult = User::where('name', 'LIKE', '%'. $query. '%')->get();
+          return view()->route($filterResult);
+    }
 
 
 }
