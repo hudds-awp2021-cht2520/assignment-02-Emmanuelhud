@@ -15,14 +15,14 @@ class JobController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index(Request $request) {
-        $jobs = Job::query();
-        
+        $jobsQuery = Job::orderBy('created_at', 'DESC');
+           
         if ($request->search) {
-            $jobs->where('name', 'ILIKE', "%{$request->search}%");    
+            $jobsQuery->where('name', 'LIKE', "%{$request->search}%");    
         }
-        
-        //$jobs->orderBy('created_at', 'desc')->paginate(20);
-        $jobs->orderBy('created_at', 'desc');
+           
+        $jobs = $jobsQuery->paginate(20);
+       
         return view('jobs/index', [
            'jobs' => $jobs
         ]);

@@ -16,17 +16,14 @@ class Rating extends Model
      */
     protected $guarded = [];
 
-    protected $fillable = [
-        'comment'
-    ];
+    protected $fillable = ['user_id', 'rate', 'comment'];
 
-    public function user()
-    {
-        return $this->belongsTo('App\Models\User');
-    }
-
-    public function product()
-    {
-        return $this->belongsTo('App\Models\Product');
-    }
+    public function user() {
+        return $this->belongsTo(User::class);
+      }
+      
+      public function job() {
+        return $this->belongsTo(Job::class);
+      }
+      
 }

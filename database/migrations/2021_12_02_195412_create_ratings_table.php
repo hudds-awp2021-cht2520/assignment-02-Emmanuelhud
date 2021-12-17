@@ -17,7 +17,7 @@ class CreateRatingsTable extends Migration
             $table->id();
             $table->integer('user_id');
             $table->integer('job_id');
-            $table->integer('rating');
+            $table->integer('rate');
             $table->text('comment');
             $table->integer('status');
             $table->timestamps();

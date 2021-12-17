@@ -26,6 +26,8 @@
         <button type="submit" class="btn btn-blue">Search</button>
     </form>
 
+    <a href="/jobs">Back to job list</a>
+
     @foreach ($jobs as $job)
         <article>
             <h3><a href="{{ route('jobs.show', $job->id) }}">{{ $job->name }}</a></h3>

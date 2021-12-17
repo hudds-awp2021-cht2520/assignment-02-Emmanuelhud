@@ -8,6 +8,10 @@
 
 <br><br><br><br>
 
+@foreach($job->ratings() as $rating)
+    <h4>{{$rating->rate}}</h4>
+@endforeach
+
 <h3>
 Rate this product
 </h3>
@@ -32,8 +36,4 @@ Rate this product
                 <div class="alert alert-danger">{{ $message }}</div>
             @enderror
         </div>
-
-    <p>{{ $rating->location }}</p><br>
-    <p>{{ $rating->description }}</p>
-
     @endsection
