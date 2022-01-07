@@ -5,7 +5,7 @@
 
 @section('content')
     @if (Auth::guest())
-        <form action="{{ route('authenticate') }}" method="POST">
+        <form action="{{ route('authenticate') }}" method="POST" style="text-align:center;">
             @csrf
 
             @if ($message = Session::get('success'))
@@ -16,6 +16,14 @@
                 </div>
             @endif
 
+            <div class="my-10">
+                <a href="{{ url('auth/redirect') }}" class="btn btn-blue">Login with GitHub</a>
+            </div>
+
+            <div class="my-10">
+                <p style="text-align:center;">OR</p>
+            </div>
+            
             <div class="my-10">
                 <label for="email">Email:</label>
                 <input type="text" name="email" id="email" class="p-2 bg-gray-200 @error('email') is-invalid @enderror" />
