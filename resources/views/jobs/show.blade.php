@@ -6,6 +6,10 @@
 
 
 
+<!-- 
+	CSS adapted from -
+	https://www.tailwindtoolbox.com/templates/profile-card
+ -->
 
 
 <div class="max-w-4xl flex items-center h-auto flex-wrap my-32 lg:my-0">

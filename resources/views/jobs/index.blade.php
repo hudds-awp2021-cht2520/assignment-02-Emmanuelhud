@@ -34,6 +34,10 @@
 </div>
 </form>
 
+<!-- 
+    CSS adapted from -
+    https://flowbite.com/docs/components/card/
+ -->
     
     @foreach ($jobs as $job)
         <article class="ml-12">
