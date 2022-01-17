@@ -15,7 +15,8 @@ class JobController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index(Request $request) {
-        $jobsQuery = Job::orderBy('created_at', 'DESC');
+        $jobsQuery = Job::withVotes()
+        ->orderBy('created_at', 'DESC');
            
         if ($request->search) {
             $jobsQuery->where('name', 'LIKE', "%{$request->search}%");    
@@ -156,7 +157,7 @@ class JobController extends Controller
         $job->addUpVote(Auth::user());
 
         return redirect()->route('jobs.index')
-            ->with('success', 'Job up voted');
+            ->with('success', 'You have recommended this job to others!');
         }
 
     public function downVote(Job $job) {

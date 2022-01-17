@@ -25,6 +25,10 @@ Route::post('/register', [UserController::class, 'store'])->name('register.store
 Route::post('/jobs/{job}/up-vote', [JobController::class, 'upVote'])->name('jobs.upvote')->middleware('auth');
 Route::post('/jobs/{job}/down-vote', [JobController::class, 'downVote']) ->name('jobs.downvote')->middleware('auth');
 
+// Route::get('/login/github', [LoginController::class, 'login'])->name('github');
+// Route::get('/login/github/redirect', [LoginController::class, 'login'])->name('githubRedirect');
+
+
 Route::get('/auth/redirect', function () {
     return Socialite::driver('github')->redirect();
 });
@@ -53,7 +57,7 @@ Route::get('/auth/callback', function () {
 
     Auth::login($user);
 
-    return redirect('/dashboard');
+    return redirect('/jobs');
 });
 Route::get('/auth/callback', function () {
     $user = Socialite::driver('github')->user();
